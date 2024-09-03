@@ -15,6 +15,7 @@ import { Contactlist } from "./views/Contactlist.jsx";
 import {Todolist} from "./views/Todolist.jsx"
 import { File404 } from "./views/File404.jsx";
 import { Carduser } from "./component/Carduser.jsx";
+import { Invitation } from "./views/Invitation.jsx";
 
 //create your first component
 const Layout = () => {
@@ -28,14 +29,15 @@ const Layout = () => {
 				<ScrollToTop>
 					{/* <Navbar /> */}
 					<Routes>
-						<Route path="/" element={<Home />} />
-						<Route path="/demo" element={<Demo />} />
+						<Route path="/" element={<Invitation />} />
+						{/* <Route path="/demo" element={<Demo />} />
 						<Route path="/single/:theid" element={<Single />} />
 						<Route path="/contacts" element={<Contact />} />
 						<Route path="/contact-list" element={<Contactlist />} />
 						<Route path="/carduser" element={<Carduser />} />
 						<Route path="/todolist" element={<Todolist />} />
-						<Route path="*" element={<File404/>}/>
+						<Route path="/invitation" element={<Invitation />} />
+						<Route path="/todolist" element={<Todolist />} /> */}
 					</Routes>
 					<Footer />
 				</ScrollToTop>

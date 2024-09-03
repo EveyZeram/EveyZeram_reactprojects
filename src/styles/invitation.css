@@ -1,0 +1,38 @@
+/* Fondo con degradado */
+body {
+    /* background-image: linear-gradient(to bottom, #ef68b5, #ea69c0, #e36cca, #db6ed5, #d172df, #c46fe0, #b66ce2, #a76ae3, #9360dc, #7d56d6, #654dd0, #4844c9); */
+    background-image: linear-gradient(to bottom, #c33386, #c43996, #c340a6, #c048b6, #bb51c7, #b051cc, #a452d0, #9753d5, #844bcf, #6f43ca, #583cc4, #3b36be);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    color: #ebe5e5; /* Asegura un buen contraste */
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif, cursive; /* Fuente limpia y legible */
+    min-height: 100vh; /* Asegura que el fondo cubra toda la pantalla */
+    margin: 0; /* Elimina márgenes por defecto */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.texto {
+    color: #654dd0;
+}
+
+.boton1 {
+    background-color: #891cb4;
+    border-radius: 10px;
+    border-color: #a3a1a3;
+    color: white;
+   }
+
+.boton2 {
+    background-color: #6fac77;
+    border-radius: 10px;
+    border-color: #050005;
+   }
+
+.card {
+    border-radius: 10px;
+    box-shadow: #4844c9;
+}

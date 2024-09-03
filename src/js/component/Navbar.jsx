@@ -20,6 +20,7 @@ export const Navbar = () => {
           <Dropdown.Item href="/contact-list">Contact List</Dropdown.Item>
           <Dropdown.Item href="/contacts">Contacts</Dropdown.Item>
           <Dropdown.Item href="/starwars">Star Wars's Blog</Dropdown.Item>
+          <Dropdown.Item href="/invitation">Wed. Invitation</Dropdown.Item>
         </Dropdown.Menu>
       </Dropdown>
       </div>
