@@ -48,14 +48,14 @@ export const Invitation = () => {
                                 </div>
                                 {isFormVisible && (
                                     <div>
-                                    <a href="https://forms.gle/KoKZS3pXpu4uzBvb8" className="btn btn boton1 p-2 m-1 disabled" onClick={handleFormClick}>
-                                        Formulario
-                                    </a>
-                                    <div className="alert alert-danger mt-2" role="alert">
-                                        El formulario todavía no está disponible. 
+                                        <a href="https://forms.gle/KoKZS3pXpu4uzBvb8" className="btn btn boton1 p-2 m-1 disabled" onClick={handleFormClick}>
+                                            Formulario
+                                        </a>
+                                        <div className="alert alert-danger mt-2" role="alert">
+                                            El formulario todavía no está disponible.
+                                        </div>
                                     </div>
-                                    </div>
-                                    )}
+                                )}
                             </div>
                         </div>
                     </div>
@@ -85,13 +85,18 @@ export const Invitation = () => {
                         </a>
                     </div>
                     <div className="p-3">
+                        <h4>Las fotos locas:</h4>
+                        <a href="https://www.bodas.net/web/bolli_boda/album" className="btn btn boton1 p-2 m-1 disabled" onClick={handleFormClick}>
+                            Wedshoots
+                        </a>
+                        <p>Código: ES3dbb29ad</p>
+                        <br />
+
+                    </div>
+                    <div className="p-3">
                         <p>Sí, tu presencia es suficiente ya lo sabes, pero oye, si te apetece contribuir y tal...
-                            Nos mola el rollito efectivo bajo el colchón, pero si no es viable, puede dejar su contribución aquí:
+                            Nos mola el rollito efectivo bajo el colchón, pero si no es viable, habla con nosotras.
                             <br />
-                            <p>
-                                IBAN: XXXX-XXXX-XXXX-XXXX
-                                Bizum: 680278089
-                            </p>
                         </p>
                     </div>
                     <h4>TE ESPERAMOS
