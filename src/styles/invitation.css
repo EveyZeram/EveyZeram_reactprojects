@@ -29,10 +29,27 @@ body {
 .boton2 {
     background-color: #6fac77;
     border-radius: 10px;
-    border-color: #050005;
+    border-color: #bb60bb;
    }
+
+.boton3 {
+    border-radius: 10px;
+    border-color: #681a77;
+    background-color: #efebf0;
+   }
+
 
 .card {
     border-radius: 10px;
     box-shadow: #4844c9;
+}
+
+.alert2{
+    background-color: #7a50b6;
+    color: white;
+}
+
+.alert2 a {
+    background-color: transparent !important;
+    border: #efebf0;
 }
