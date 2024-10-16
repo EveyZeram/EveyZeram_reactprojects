@@ -1,32 +1,20 @@
 import React, { useState } from "react";
 import "../../styles/invitation.css";
-import { Link } from "react-router-dom";
 import prueba1 from "../../img/prueba1.jpg";
 import logo from "../../img/logo1.png";
+import herculesscene from "../../img/herculesscene.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLocation, faClock, faPaperPlane } from "@fortawesome/free-solid-svg-icons";
 import { faSpotify } from "@fortawesome/free-brands-svg-icons";
 
-
 export const Invitation = () => {
-
     // Crear constante de cambio de estado useState
-    // const [isEnable, setisEnable] = useState(false);
+    const [selectedoption, setSelectedoption] = useState("");
 
-    // const handleSubmit = (option) => {
-    //     if (option === "Cuenta con mi hacha") {
-    //         setisEnable(true);
-    //     }
-    // };
-
-    // const formClick = (e) => {
-    //     if (isEnable) {
-    //         e.preventDefault();
-    //         alert("El enlace todavía no está disponible")
-    //     }
-    // }
- 
-
+    // Para cambiar la opción
+    const handleSelectChange = (e) => {
+        setSelectedoption(e.target.value);
+    };
 
 
     return (
@@ -37,7 +25,7 @@ export const Invitation = () => {
                         NOS VAMOS DE BODA
                     </h1>
                     <div className="d-flex justify-content-center p-2">
-                        <div className="card" style={{ width: "100%", maxWidth: "18rem" }}>
+                        <div className="card" style={{ width: "100%", maxWidth: "20rem" }}>
                             <img src={prueba1} className="card-img-top" alt="Imagen de invitación" />
                             <div className="card-body">
                                 <h5 className="card-title">Babu's Family</h5>
@@ -46,28 +34,53 @@ export const Invitation = () => {
                                     disfrutes de este día a nuestro lado.
                                 </p>
                                 <div className="d-flex justify-content-center">
-                                    <div className="dropdown">
+                                    {/* <div className="dropdown">
                                         <button className="btn btn-outline-secondary dropdown-toggle m-1" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                                             ¿Vienes?
                                         </button>
-                                        <ul class="dropdown-menu">
+                                        <ul className="dropdown-menu">
                                             <li><a className="dropdown-item ok">Cuenta con mi hacha</a></li>
                                             <li><a className="dropdown-item ns">Todavía no lo sé</a></li>
                                             <li><a className="dropdown-item ko">No... </a></li>
                                         </ul>
+                                    </div> */}
+                                    <select className="form-select" aria-label="Default select example" value={selectedoption} onChange={handleSelectChange}>
+                                        <option selected>¿Vienes?</option>
+                                        <option value="option1">Cuenta con mi hacha</option>
+                                        <option value="option2">Todavía no lo sé</option>
+                                        <option value="option3">No puedo...</option>
+                                    </select>
+                                    <img src={herculesscene} className="w-25 p-1" alt="hercules" />
+                                    <div>
                                     </div>
-                                    <div className="">
-                                        <button className="btn btn m-1" type="submit"> Enviar <FontAwesomeIcon icon={faPaperPlane} style={{color: "#63E6BE",}} /></button>
-                                    </div>
-                                )}
+                                </div>
                             </div>
+                            {/* Aquí lo que muestra por cada opción que se elija */}
+                            {selectedoption === "option1" && (
+                                <div className="p-2">
+                                    <a href="https://forms.gle/jT9ADGdHP8bS7hs26" target="_blank" rel="noopener noreferrer" className="btn btn-success boton3 p-1 m-2">Formulario</a>
+                                    <img src="https://media.tenor.com/tgCokuvCJJsAAAAM/marivi-bilbao.gif" alt="anhqv" className="gif" />
+                                </div>
+                            )}
+                            {selectedoption === "option2" && (
+                                <div>
+                                    <img src="https://media4.giphy.com/media/XJ2LOkwAUN25LQLlvO/200w.gif?cid=82a1493ba1p1ajkmtk07zfbrqaywqf3ptdjqnb5fhpzkzmuc&ep=v1_gifs_related&rid=200w.gif&ct=g" alt="belen" className="gif" />
+                                </div>
+                            )};
+                            {selectedoption === "option3" && (
+                                <div>
+                                    <a href="hhttps://youtu.be/Y4cmPh2peBY?si=zSV7QKHvMiAemKiX&t=24" target="_blank" rel="noopener noreferrer">
+                                        <img src="https://64.media.tumblr.com/a1d9a00514c4a7dbf909f4c80e3f5cb0/tumblr_p48oqs4DnV1wkztm7o1_540.gif" alt="paquita" className="gif" />
+                                    </a>
+                                </div>
+                            )};
                         </div>
                     </div>
+
                     <div className="p-2 mt-2">
                         <h2>¿Dónde manifestaremos nuestro amor?</h2>
                         <ul className="list-unstyled">
-                            {/* Meter Iconos */}
-                            <li> <FontAwesomeIcon icon={faLocation} />  La Gañanía - Puerto de la Cruz</li>
+                            <li> <FontAwesomeIcon icon={faLocation} /> La Gañanía - Puerto de la Cruz</li>
                             <li className="p-1"> <FontAwesomeIcon icon={faClock} /> Hora: 18:00</li>
                         </ul>
                     </div>
@@ -83,8 +96,7 @@ export const Invitation = () => {
                             referrerPolicy="no-referrer-when-downgrade"
                         ></iframe>
                     </div>
-                    {/* Meter Spotify para que vean canciones, no colab */}
-                    <div className="p-3 ">
+                    <div className="p-3">
                         <h4>Empieza a ensayar que vienen curvas</h4>
                         <a href="https://open.spotify.com/playlist/1P6qv6TtNvUvHEvrvpkoPK?si=-pU9mgDaRUmZPJGwUmjrMg&pt=17e02215c918a83516b63cfccaf0191" className="btn btn-success boton2 p-1"><FontAwesomeIcon icon={faSpotify} /> Spotify </a>
                     </div>
@@ -95,7 +107,7 @@ export const Invitation = () => {
                         </p>
                     </div>
                     <h4>TE ESPERAMOS
-                        <img className="w-25" src={logo} />
+                        <img className="w-25" src={logo} alt="Logo" />
                     </h4>
                     <p>Se viene cositas...</p>
                 </div>

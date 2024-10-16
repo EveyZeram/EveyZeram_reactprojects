@@ -19,13 +19,6 @@ body {
     color: #654dd0;
 }
 
-.boton1 {
-    background-color: #891cb4;
-    border-radius: 10px;
-    border-color: #a3a1a3;
-    color: white;
-   }
-
 .boton2 {
     background-color: #6fac77;
     border-radius: 10px;
@@ -36,3 +29,33 @@ body {
     border-radius: 10px;
     box-shadow: #4844c9;
 }
+
+.boton3 {
+    background-color: #883fa5;
+    border-radius: 10px;
+    border-color: #050005;
+    transition: background-color 0.3s;
+   }
+
+.boton3:hover {
+    background-color: #bd0c6d; /* Color al pasar el ratón */
+}
+
+.boton4 {
+    background-color: #883fa5;
+    border-radius: 10px;
+    border-color: #050005;
+    transition: background-color 0.3s;
+    color: #f1ecf7;
+   }
+
+.boton4:hover {
+    background-color: #bd0c6d; /* Color al pasar el ratón */
+}
+
+.gif {
+    width: 45%; /* Cambia este valor según lo necesites */
+    max-width: 300px; /* Opcional: establece un ancho máximo */
+    height: auto; /* Mantiene la proporción de la imagen */
+}
+
