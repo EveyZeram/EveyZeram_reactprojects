@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import "../../styles/invitation.css";
 import prueba1 from "../../img/prueba1.jpg";
+import fieras from "../../img/fieras.png";
+import canta2 from "../../img/canta2.jpg";
 import logo from "../../img/logo1.png";
 import herculesscene from "../../img/herculesscene.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -16,7 +18,6 @@ export const Invitation = () => {
         setSelectedoption(e.target.value);
     };
 
-
     return (
         <div className="bigone container-fluid d-flex flex-column align-items-center justify-content-center p-2 m-2">
             <div className="row w-90 text-center justify-content-center">
@@ -26,12 +27,12 @@ export const Invitation = () => {
                     </h1>
                     <div className="d-flex justify-content-center p-2">
                         <div className="card" style={{ width: "100%", maxWidth: "20rem" }}>
-                            <img src={prueba1} className="card-img-top" alt="Imagen de invitación" />
+                            <img src={canta2} className="card-img-top" alt="Imagen de invitación" />
                             <div className="card-body">
                                 <h5 className="card-title">Babu's Family</h5>
                                 <p className="texto card-text">
-                                    ¡Por fin! El evento más esperado se acerca y si has recibido este enlace, es porque eres una persona importante para las dos y queremos que
-                                    disfrutes de este día a nuestro lado.
+                                    ¡Por fin! El evento más esperado se acerca. Y entendemos que si estás aquí es porque eres una persona importante para las dos y no porque se haya filtrado el enlace a todo quisqui.
+                                    Empieza la cuenta atrás para que nos acompañes y disfrutes de este día a nuestro lado.
                                 </p>
                                 <div className="d-flex justify-content-center">
                                     {/* <div className="dropdown">
@@ -45,11 +46,13 @@ export const Invitation = () => {
                                         </ul>
                                     </div> */}
                                     <select className="form-select" aria-label="Default select example" value={selectedoption} onChange={handleSelectChange}>
+                                        {/* hacer contador de personas que van, o no, o tal vez */}
                                         <option selected>¿Vienes?</option>
                                         <option value="option1">Cuenta con mi hacha</option>
                                         <option value="option2">Todavía no lo sé</option>
                                         <option value="option3">No puedo...</option>
                                     </select>
+                                    {/* <img src={fieras} className="fieras p-1" alt="hercules" /> */}
                                     <img src={herculesscene} className="w-25 p-1" alt="hercules" />
                                     <div>
                                     </div>
@@ -58,7 +61,7 @@ export const Invitation = () => {
                             {/* Aquí lo que muestra por cada opción que se elija */}
                             {selectedoption === "option1" && (
                                 <div className="p-2">
-                                    <a href="https://forms.gle/jT9ADGdHP8bS7hs26" target="_blank" rel="noopener noreferrer" className="btn btn-success boton3 p-1 m-2">Formulario</a>
+                                    {/* <a href="https://forms.gle/jT9ADGdHP8bS7hs26" target="_blank" rel="noopener noreferrer" className="btn btn-success boton3 p-1 m-2">Formulario</a> */}
                                     <img src="https://media.tenor.com/tgCokuvCJJsAAAAM/marivi-bilbao.gif" alt="anhqv" className="gif" />
                                 </div>
                             )}
@@ -76,15 +79,14 @@ export const Invitation = () => {
                             )};
                         </div>
                     </div>
-
                     <div className="p-2 mt-2">
                         <h2>¿Dónde manifestaremos nuestro amor?</h2>
+                        <img src={fieras} className="fieras w-35 p-1" alt="hercules" />
                         <ul className="list-unstyled">
                             <li> <FontAwesomeIcon icon={faLocation} /> La Gañanía - Puerto de la Cruz</li>
                             <li className="p-1"> <FontAwesomeIcon icon={faClock} /> Hora: 18:00</li>
                         </ul>
                     </div>
-                    <br />
                     <div className="mt-3 d-flex flex-column align-items-center">
                         <iframe
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3509.4213625752946!2d-16.533334924841036!3d28.406539975789002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xc41d559de7ae8a5%3A0x9d97500c7f545aed!2sLa%20Ga%C3%B1an%C3%ADa%20Finca%20%26%20Catering!5e0!3m2!1ses!2ses!4v1721477008483!5m2!1ses!2ses"
@@ -96,7 +98,8 @@ export const Invitation = () => {
                             referrerPolicy="no-referrer-when-downgrade"
                         ></iframe>
                     </div>
-                    <div className="p-3">
+                    {/* Activar más tarde */}
+                    {/* <div className="p-3">
                         <h4>Empieza a ensayar que vienen curvas</h4>
                         <a href="https://open.spotify.com/playlist/1P6qv6TtNvUvHEvrvpkoPK?si=-pU9mgDaRUmZPJGwUmjrMg&pt=17e02215c918a83516b63cfccaf0191" className="btn btn-success boton2 p-1"><FontAwesomeIcon icon={faSpotify} /> Spotify </a>
                     </div>
@@ -105,11 +108,13 @@ export const Invitation = () => {
                             Nos mola el rollito efectivo bajo el colchón, pero si no es viable, habla con nosotras.
                             <br />
                         </p>
-                    </div>
+                    </div> */}
+                    <br />
                     <h4>TE ESPERAMOS
                         <img className="w-25" src={logo} alt="Logo" />
                     </h4>
-                    <p>Se viene cositas...</p>
+                    <p>Por el momento, esto es todo lo que podemos contar... pero les vamos avisando que... </p>
+                    <b>Se vienen cositas...</b>
                 </div>
             </div>
         </div>
