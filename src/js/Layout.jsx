@@ -9,12 +9,6 @@ import { Single } from "./views/single.js";
 import injectContext from "./store/appContext.js";
 // Import components
 // import { Navbar } from "./component/Navbar.jsx";
-import { Footer } from "./component/Footer.jsx";
-import { Contact } from "./views/Contacts.jsx";
-import { Contactlist } from "./views/Contactlist.jsx";
-import {Todolist} from "./views/Todolist.jsx"
-import { File404 } from "./views/File404.jsx";
-import { Carduser } from "./component/Carduser.jsx";
 import { Invitation } from "./views/Invitation.jsx";
 
 //create your first component
@@ -39,7 +33,6 @@ const Layout = () => {
 						<Route path="/invitation" element={<Invitation />} />
 						<Route path="/todolist" element={<Todolist />} /> */}
 					</Routes>
-					<Footer />
 				</ScrollToTop>
 			</BrowserRouter>
 		</div>
