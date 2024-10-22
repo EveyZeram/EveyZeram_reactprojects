@@ -81,7 +81,7 @@ export const Invitation = () => {
                     </div>
                     <div className="p-2 mt-2">
                         <h2>¿Dónde manifestaremos nuestro amor?</h2>
-                        <img src={fieras} className="fieras w-35 p-1" alt="hercules" />
+                        <img src={fieras} className="fieras p-1" alt="hercules" />
                         <ul className="list-unstyled">
                             <li> <FontAwesomeIcon icon={faLocation} /> La Gañanía - Puerto de la Cruz</li>
                             <li className="p-1"> <FontAwesomeIcon icon={faClock} /> Hora: 18:00</li>
